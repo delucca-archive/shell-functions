@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Imports
 # -------------------------------------------------------------------------------------------------
 
-source <(https://raw.githubusercontent.com/delucca/shell-functions/1.0.0/modules/feedback.sh)
+source <(curl -s "https://raw.githubusercontent.com/delucca/shell-functions/1.0.0/modules/feedback.sh")
 
 # Helpers
 # -------------------------------------------------------------------------------------------------
