@@ -1,27 +1,46 @@
-# Customizing your repository
+<p align="center">
+  <br>
+   <img src="https://media.giphy.com/media/lPcghSeSxVeBl8qtt1/giphy.gif" alt="A scene from Rick and Morty where Morty's head is a planet that is vomiting rainbowns" title="Shell Functions header's GIF" />
+  <br>
+</p>
+<p align="center">
+Helper functions to use in my custom shell scripts 
+</p>
 
-After creating a new repository with this template, some files may require proper customization. To do so, please follow these steps:
+# Shell Functions
 
-## Prerequisites
+* [Why](#why)
+* [Quickstart](#quickstart)
+* [Usage](#usage)
+* [License](#license)
 
-* [gomplate][]
-* [tree][]
+## Why
 
-## Customization
+While coding shell scripts, there are plenty of standard tasks that I need to do. This repository contains modules that can be imported by other scripts.
 
-### Step 1: Define your variables
+## Quickstart
 
-You can do so by replacing the values inside the `customize.json` file
-
-### Step 2: Run the customization binary
-
+You can import a given script with the following line:
 ```sh
-./customize
+<replace>
 ```
 
-### Step 3: Enjoy!
+This will add all helpers functions from that module to your shell script
 
-Now, your repository is ready to go!
+## Usage
 
-[gomplate]: https://docs.gomplate.ca/installing/
-[tree]: https://linux.die.net/man/1/tree
+Each module has it's own usage and functions. Below, I've wrote an one-liner for each module, explaining their general purpose:
+
+* [Feedback][feedback-module]: Functions that give feedback for our user in the CLI, such as logs, spinners, and others
+* [Validation][validation-module]: Functions that validate date, throwing errors when they are not valid
+* [Authorization][authorization-module]: Functions that handle relevant authorization tasks
+
+## License
+
+This repository is distributed under the Apache 2.0 License. See [`LICENSE`][license] for more information.
+
+[contributing]: CONTRIBUTING.md
+[license]: LICENSE
+[feedback-module]: modules/feedback.sh
+[validation-module]: modules/validation.sh
+[authorization-module]: modules/authorization.sh
