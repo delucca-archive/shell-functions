@@ -20,10 +20,12 @@ While coding shell scripts, there are plenty of standard tasks that I need to do
 
 ## Quickstart
 
-You can import a given script with the following line:
+You can import a given module by adding following line to your script:
 ```sh
-<replace>
+source <(curl -s "https://raw.githubusercontent.com/delucca/shell-functions/<desired-release-tag>/modules/<desired-module>.sh")
 ```
+> 💡 You can get the release tag in ouor [releases page][releases-page]
+
 
 This will add all helpers functions from that module to your shell script
 
@@ -44,3 +46,4 @@ This repository is distributed under the Apache 2.0 License. See [`LICENSE`][lic
 [feedback-module]: modules/feedback.sh
 [validation-module]: modules/validation.sh
 [authorization-module]: modules/authorization.sh
+[releases-page]: https://github.com/delucca/shell-functions/releases
