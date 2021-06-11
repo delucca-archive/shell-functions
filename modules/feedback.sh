@@ -82,9 +82,8 @@ function log {
 
   reset=$(tput sgr0)
   dim=$(tput dim)
-  white=$(tput setaf 7)
-  isodate=$(date +"%Y-%m-%dT%H:%M:%S")
-  color="${C_LOG:-${white}}"
+  isodate=$(date +"%Y-%m-%dT%H:%M:%S.%N")
+  color="${C_LOG:-${dim}}"
 
-  echo "${color}${dim}[${isodate}]${reset} ${message}"
+  echo "${color}[${isodate}]${reset} ${message}"
 }
