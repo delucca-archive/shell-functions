@@ -47,3 +47,22 @@ function throw_error {
   log_error "${message}"
   exit 1
 }
+
+function log_in_category {
+  category=$1
+  text=$2
+  color="${3:-C_HIGHLIGHT}"
+
+  echo "$(highlight "${category}:" "${color}") ${text}"
+}
+
+function highlight {
+  bold=$(tput bold)
+  color_default=$(tput setaf 6)
+  reset=$(tput sgr0)
+
+  text=$1
+  color="${2:-$color_default}"
+
+  echo "${bold}${color}${text}${reset}"
+}
