@@ -51,7 +51,7 @@ function throw_error {
 function log_in_category {
   category=$1
   text=$2
-  color="${3:-C_HIGHLIGHT}"
+  color="${3:-$C_HIGHLIGHT}"
 
   echo "$(highlight "${category}:" "${color}") ${text}"
 }
