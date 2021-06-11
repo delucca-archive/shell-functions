@@ -67,3 +67,24 @@ function highlight {
 
   echo "${bold}${color}${text}${reset}"
 }
+
+function log_from_fn {
+  text=$1
+  color="${2:-$C_HIGHLIGHT}"
+
+  callee=${FUNCNAME[1]}
+
+  log "$(highlight "${callee}:" "${color}") ${text}"
+}
+
+function log {
+  message=$1
+
+  reset=$(tput sgr0)
+  dim=$(tput dim)
+  white=$(tput 7)
+  isodate=$(date +"%Y-%m-%dT%H:%M:%S")
+  color="${C_LOG:-${dim}${white}}"
+
+  echo "${color}[${isodate}]${reset} ${message}"
+}
