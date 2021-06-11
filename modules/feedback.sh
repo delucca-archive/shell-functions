@@ -10,8 +10,9 @@ source <(curl -s https://raw.githubusercontent.com/tlatsas/bash-spinner/master/s
 function start_spinner_in_category {
   category=$1
   message=$2
+  color=$3
 
-  full_message="  \x1B[36m\r➤\e[1m ${category}:\x1B[0m ${message}"
+  full_message=$(log_in_category "${category}" "${message}" "${color}")
 
   start_spinner "${full_message}"
 }
