@@ -82,7 +82,7 @@ function log {
 
   reset=$(tput sgr0)
   dim=$(tput dim)
-  white=$(tput 7)
+  white=$(tput setaf 7)
   isodate=$(date +"%Y-%m-%dT%H:%M:%S")
   color="${C_LOG:-${dim}${white}}"
 
